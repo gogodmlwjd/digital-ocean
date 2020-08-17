@@ -1,0 +1,242 @@
+@charset "utf-8";
+/* main.css - 메인페이지 CSS */
+
+/*파일merging(합치기)*/
+@import url(reset.css);
+@import url(common.css);
+@import url(core.css);
+@import url(gridSetFlex.css);
+@import url(gridView.css);
+
+/*공통사항*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,body, .main_wrap, .main_visual_wrap {
+    margin: 0;
+    padding: 0;
+    /*보이는 화면기준 100% 
+    - 직계하위 요소에 %를 쓸경우 필수셋팅!*/
+    /* +++원하는 대상을 감싸는 모든 태그에 줘야한다. */
+}
+
+/*그리드재정의*/
+.grid{
+    width: 1200px;
+    z-index: -1;
+}
+
+/*------------*/
+
+/*검수용 이미지*/
+.vi {
+    position: absolute;
+    top: -160px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -2;
+    display: none;
+}
+
+/*0.퀵메뉴영역*/
+.quick_menu{
+    position: fixed;
+    left:50%;
+    top:25%;
+    margin-left:680px;
+    z-index: 999999;
+}
+
+
+/********3.메뉴영억**************/
+.menu_wrap{
+    width:100%;
+    background-color: pink;
+}
+
+.menu_area{
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: deeppink;
+}
+
+.tit .menu_title{
+    padding-top:172px;
+    padding-bottom: 20px;
+    padding-left:78px;
+    position: relative;
+    overflow: hidden;
+    background-color: hotpink;
+    
+}
+
+.sunrize{
+    position: absolute;
+    left: 50px;
+    top: 211px;/*100px;*/
+    transition: top .8s ease-in-out;
+}
+.menu_title:hover .sunrize{
+    top: 100px;
+}
+
+.menu_title h2{
+    font-size: 2.5rem;
+    color: #2d27ff;
+    font-family: '양진체';
+    font-weight: 400;
+    position: relative;
+    
+}
+.menu_title h2::after{
+    content:"";
+    position: absolute;
+    left:-34px;
+    top: 38px;
+    width:290px;
+    height: 3px;
+    background-color: #4800af;
+}
+
+/*********텝메뉴*********/
+.tab_menu{
+    margin:20px 50px 0 0;
+    float: right;
+    margin-bottom: 80px;
+    background-color: paleturquoise;
+    
+}
+
+.tab_menu li{
+    float: left;
+    overflow: hidden;
+    padding-left:20px;
+    position: relative;
+}
+.tab_menu li::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: 10px;
+    width: 2px;
+    background-color: #212121;
+}
+
+.tab_menu li:first-child::before{
+    display: none;
+}
+
+.tab_menu a{
+    display: block;
+    font-size: 1.125rem;
+}
+
+.tab_menu a:hover{
+    color:#2d27ff;
+    font-weight: 600;
+}
+
+
+
+
+
+
+/************디저트메뉴*******************/
+
+/*********슬라이드*****************/
+
+.menu_silder_wrap{
+    width: 90%;
+}
+
+.menu_silder{
+    position: absolute;
+    left:0;
+    top: 0;
+    width: 400%;
+    height: 100%;
+    display: flex;
+}
+
+
+.menu_silder>li{
+    position: relative;
+    /*부모자격*/
+    width: 25%;
+    height: 100%;
+}
+
+/*.silder_dessert*/
+.silder_n_menu{
+    display: flex;
+    width: 100%;
+    margin:0 auto;
+    height: 340px;
+    padding-top:30px;
+    outline:1px dashed lime;
+    overflow: hidden;
+    background-color: rgba(255, 149, 235, 0.37);
+    
+}
+/****silder_n_menu******/
+.menu_silder:nth-child(1)/**/{
+    background: url(../images/event_bg.jpg) no-repeat center/cover;
+}
+
+
+.menu_silder>li>ul li{
+    width:25%;
+}
+
+.menu_silder>li>ul a{
+    display: block;
+    background:auto;
+    text-align: center;
+}
+
+.menu_silder>li>ul img{
+    display: block;
+    width: 80%;
+    margin:0 auto;
+    transition: transform .4s;
+}
+
+.menu_silder>li>ul :hover img{
+    transform: scale(1.2);
+}
+.menu_silder>li>ul li:hover{
+    background:url(../images/menu_hover_bg.png) no-repeat top/90%;/*contain*/;
+}
+.menu_silder>li>ul h3{
+    padding-top: 24px;
+    font-size: 1.625rem;
+}
+
+
+.silder_dessert{
+    display: flex;
+}
+/*******/
+
+
+
+
+/*전체메뉴 바로가기 버튼*/
+.menu_shortcuts{
+    margin:50px auto 90px auto;
+    width: 184px;
+    height: 60px;
+    line-height: 58px;
+    font-size: 1.5rem;
+    text-align: center;
+    border:1px solid #212121;
+    border-radius: 10px;
+    background-color: #fff;
+}
+.menu_shortcuts a{
+    display: block;
+}

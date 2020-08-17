@@ -1,0 +1,623 @@
+@charset "utf-8";
+/* main.css - 메인페이지 CSS */
+
+/*파일merging(합치기)*/
+@import url(reset.css);
+@import url(common.css);
+@import url(core.css);
+@import url(gridSetFlex.css);
+@import url(gridView.css);
+
+/*공통사항*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body, .main_wrap{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    /*보이는 화면기준 100% 
+    - 직계하위 요소에 %를 쓸경우 필수셋팅!*/
+    /* +++원하는 대상을 감싸는 모든 태그에 줘야한다. */
+}
+
+section{width: 100%;height: 100%;}
+
+/*그리드재정의*/
+.grid{
+    width: 1200px;
+    z-index: -1;
+}
+
+/*------------*/
+
+/*검수용 이미지*/
+.vi {
+    position: absolute;
+    top: -160px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -2;
+    display: none;
+}
+
+/*0. 퀵메뉴 영역*/
+.quick_menu{
+    position: fixed;
+    left:2%;
+    top:25%;
+    z-index: 999999;
+}
+.quick_menu a{
+    display: block;
+}
+
+/*1.헤더영역*/
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    z-index: 9999999;
+}
+
+header h1{
+    position: absolute;
+    left: 110px;
+    bottom: 30px;
+}
+header img{
+    width:40%;
+}
+
+.gnb{
+    position: absolute;
+    right: 80px;
+    bottom: 30px;
+    display: flex;
+    font-size: 0.875rem;
+}
+
+.gnb a{
+    display: block;
+    font-weight: normal;
+    margin-left:90px;
+    position: relative;
+}
+
+.gnb a:hover::before{
+    font-weight: 900;/*폰트 굵기 안먹힘*/
+    position: absolute;
+    content: '';
+    left: 0;
+    right: 0;
+    bottom: 4px;
+    height: 6px;
+    background: linear-gradient(to top, #81d6ea 50%, transparent 50%);
+}
+
+
+
+/***********2.메인비주얼 영역************/
+.main_visual_wrap{
+    background:url(../images/diocean_Big_revise.jpg) no-repeat center/cover;
+    display: flex;
+    position: relative;
+}
+.main_tit, .company_name{
+    position: absolute;
+}
+
+
+.op_box{
+    background-color: rgba(255, 255, 255, 0.54);
+    
+}
+
+.left{
+    width: 20%;
+    height: 100%;    
+}
+
+/*******메인 비주얼 hover 효과********/
+.none_op_box{
+    background-color:rgba(0, 0, 0, 0);
+}
+.none_op_box{
+    position: absolute;
+    transition: opacity .4s
+}
+
+.none_op_box{
+    opacity: 0;
+}
+.none_op_box:hover{
+    background-color: rgba(0, 0, 0, 0.45);
+    opacity: 1;
+}
+/*******************/
+
+.none_op_box{
+    width: 30%;
+    height: 100%;
+    color:#fff;
+    text-align: center;
+    position: relative;
+}
+
+.none_op_box h2{
+    font-family: 'Orbitron', sans-serif;
+    padding-top: 45%;
+    font-size: 3.75rem;
+    position: relative;
+}
+
+.none_op_box h2::after{
+    position: absolute;
+    content: '';
+    left:50%;
+    bottom: -46px;
+    width: 30px;
+    height: 4px;
+    transform: translateX(-50%);
+    background-color: #fff;
+        
+}
+.none_op_box p{
+    padding-top: 20%;
+    font-size: 1.75rem;
+}
+
+.none_op_box button{
+    cursor: pointer;
+    position: absolute;
+    bottom:10%;
+    left:50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 50px;
+    border:2px solid #fff;
+    border-radius: 10px;
+    color:#fff;
+    font-size: 1.625rem;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.none_op_box button a{
+    display: block;
+    color:#fff;
+    font-size: 1.625rem;
+}
+
+.none_op_box h2, .none_op_box h2::after, .none_op_box p, .none_op_box button{
+    /*opacity: 0;*/
+}
+
+.right{
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+
+
+
+/*메인 비주얼 제목*/
+.main_tit{
+    font-size: 4.5rem;
+    font-family: 'Orbitron', sans-serif;
+    color: rgba(42, 42, 42, 0.45);
+}
+.first{
+    left:50%;
+    margin-left:3%;
+    top:40%;
+}
+
+.first::before{
+    position: absolute;
+    content: '';
+    left: 0;
+    top: -80px;
+    width: 50px;
+    height: 15px;
+    background-color: rgba(42, 42, 42, 0.45);
+}
+
+.second{
+    left: 54%;
+    margin-left: 3%;
+    top: 50%;
+}
+
+.first::after{
+    position: absolute;
+    content: '';
+    left: 0;
+    width: 480px;
+    bottom: -130px;
+    height:1px;
+    background-color: rgba(42, 42, 42, 0.45);
+}
+
+.work_sc_btn{
+    cursor: pointer;
+    position: absolute;
+    top: 60%;
+    margin-left: 24%;
+    display: block;
+    width: 150px;
+    height: 50px;
+    border:0;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.25rem;
+    line-height: 50px;
+    font-family: 'Orbitron', sans-serif;
+    background-color: rgba(255, 255, 255, 0.28);
+    box-shadow: 5px 10px 8px rgba(33, 33, 33, 0.21);
+}
+
+.work_sc_btn:hover{
+    background-color: rgba(255, 255, 255, 0.56);
+    transition: background .4s;
+}
+
+.work_sc_btn img{
+    width: 14%;
+    vertical-align: -3px;
+}
+
+.company_name{
+    left: 30px;
+    bottom: 30px;
+}
+.company_name::after{
+    position: absolute;
+    content: '';
+    right: -20px;
+    bottom: 0;
+    width: 16px;
+    height: 1px;
+    background-color: #212121;
+}
+
+
+/**************섹션 공통 사항********************/
+.sec_tit{
+    padding-top:100px;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.25rem;
+    position: relative;
+}
+.sec_tit::after{
+    position: absolute;
+    content: '';
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+    width: 60px;
+    background-color: #81d6ea;
+}
+.sec_sub_tit{
+    text-align: center;
+    padding-top: 50px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.125rem;
+    color:#d4d4d4;
+}
+.sec_copy{
+    text-align: center;
+    padding-top: 10px;
+    
+}
+
+/****************************************/
+
+
+/******3. about_us영역********/
+
+.about_us_wrap{
+    text-align: center;
+    
+}
+.about_us_area{
+    max-width:1100px;
+    margin:0 auto;
+}
+.about_us_list{
+    
+    margin-top: 50px;
+    text-align: center;
+    display: flex;
+}
+.about_us_list li{
+    width: 25%;
+}
+
+.about_us_list p{
+    width: 100%;
+    margin-top:40px;
+}
+.about_main_img{
+    margin-top: 25px;
+    width: 60%;
+}
+
+
+/******4. service영역******/
+
+.service_wrap .sec_copy{
+    padding-bottom: 60px;
+}
+
+
+.service_wrap{
+    height:100%;
+    text-align: center;
+    background-color: #f5f6f9;
+}
+
+.service_area{
+    height: 100%;
+}
+
+
+.service_tit_wrap{
+    background-color: #fff;
+    
+    
+}
+.service_list{
+    width:900px; max-width: 100%;
+    margin:0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+.service_list li{
+    margin-top: 6%;
+    width:25%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+}
+
+.service_list li::after{
+    position: absolute;
+    content: '';
+    height: 1px;
+    left: 0;
+    right: 0;
+    bottom: 109px;
+    background-color: #81d6ea;
+    z-index: 9;
+}
+
+
+/*서비스 아이콘 효과*/
+
+.service_list li{
+    position: relative;
+}
+.service_list li img{
+    position: absolute;
+    transition: opacity .4s
+}
+
+.service_list li img:last-child{
+    opacity: 0;
+}
+.service_list li:hover img:last-child{
+    opacity: 1;
+}
+.service_list li:hover img:first-child{
+    opacity: 0;
+}
+/****************/
+
+
+
+.service_list h5{
+    font-size: 1.25rem;
+}
+
+
+.service_list h5::after{
+    position: absolute;
+    content: 'n';
+    color:#fff;
+    font-size: 0.75rem;
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+    left:calc(50% - 10px);
+    border-radius: 50%;
+    bottom: 100px;
+    background-color: #81d6ea;
+    z-index: 10;
+}
+
+.service_list p{
+    font-size: 0.9375rem;
+    margin-top:18px;
+}
+
+.service_list span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border:1px solid #212121;    
+}
+
+.service_list text{
+    padding-top: 60px;
+}
+
+
+/***5. works 영역****/
+.work_area{
+    width: 900px; max-width: 100%;
+    margin:0 auto;
+}
+
+.tit_work{
+    text-align: left;
+}
+
+.sec_tit.tit_work::after{
+    left: 30px;
+}
+.work_area p{
+    padding-top: 50px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.125rem;
+    color:#d4d4d4;
+}
+.work_area h4{
+    padding-top:35px;
+    font-size: 2rem;
+    text-align: center;    
+}
+/********************/
+.work_list{
+    margin-top:40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+    background-color: blue;
+    height: 560px;
+}
+.work_list li{
+    width:31%;
+    background-color: red;
+    height: 260px;
+}
+
+/******************6. contact영역******************/
+.company_intro{
+    text-align: center;
+    height:65%;
+    background: url("../images/contact_bg_smaple_1.jpg" ) no-repeat center / cover;
+    position: relative;
+    
+    
+}
+.company_intro::before{
+    position: absolute;
+    content: '';
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(17, 17, 17, 0.65);
+}
+
+.intro_main_tit{
+    position: relative;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 400;
+    color:#fff;
+    padding-top: 80px;
+    font-size: 4.375rem;
+    line-height: 5.375rem;
+}
+
+.intro_main_tit span{
+    font-size: 6.125rem;
+}
+
+.intro_main_tit img{
+    padding-left:20px;
+}
+.company_intro button{
+    position: relative;
+    cursor: pointer;
+    border:0;
+    background:none;
+    overflow: hidden;
+    margin-top: 100px;
+}
+.company_intro button a{
+    display: block;
+    width: 150px;
+    height: 50px;
+    line-height: 48px;
+    border: 1px solid #fff;
+    border-radius: 25px;
+    background-color:rgba(255, 255, 255, 0.25);
+    font-size: 1.125rem;
+    color:#fff;
+}
+
+/******6-2. footer영역******/
+footer{
+    height:35%;
+    background-color: #202020;
+    color:#fff;
+}
+
+.footer_area{
+    width: 900px; max-width: 100%;
+    margin:0 auto;
+    padding:0 60px;
+}
+.footer_area h4{
+    padding-top:8%;
+    text-align: center;
+}
+.footer_info_wrap{
+    display: flex;
+    flex-wrap: wrap;
+    height: 140px;
+    margin-top:4%;
+    width: 100%;
+    align-content: space-between;
+}
+
+.footer_info_top, .footer_info_bottom{
+    width: 100%;
+    display: flex;
+}
+.footer_info_top li:first-child, .footer_info_bottom li:first-child{
+    width: 60%;
+}
+.footer_info_top li:last-child, .footer_info_bottom li:last-child{
+    width: 40%;
+}
+
+.footer_info_top li:first-child{
+    position: relative;
+}
+
+.footer_info_top li:first-child::after{
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 10%;
+    height: 140px;
+    width: 2px;
+    background-color: #fff;
+}
+
+.footer_info_top{
+    position: relative;
+}
+
+.footer_info_bottom a{
+    color:#fff;
+}

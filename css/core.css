@@ -1,0 +1,96 @@
+@charset "utf-8";
+/* core.css - 중요공통기능*/
+
+/**********폰트**********/
+/*양진체*/
+@font-face { font-family: '양진체'; src: url('https://cdn.jsdelivr.net/gh/supernovice-lab/font@0.9/yangjin.woff') format('woff'); font-weight: normal; font-style: normal; }
+/*에스코어드림*/
+@font-face { font-family: 'S-CoreDream-8Heavy'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-8Heavy.woff') format('woff'); font-weight: normal; font-style: normal; }
+/*Orbitron*/
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+/*font-family: 'Orbitron', sans-serif;*/
+
+/*노토산*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+/*font-family: 'Noto Sans KR', sans-serif;*/
+
+/*공통*/
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #808080;
+    line-height: 136%;
+    font-size: 100%;
+    color:#212121;
+}
+
+/**********스크롤 css 디자인 변경***********/
+
+
+body::-webkit-scrollbar {
+  width: 5px;
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background: #666;
+  border-radius: 5px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #ddd;
+  border-radius: 5px;
+}
+body{
+	scrollbar-face-color: #333;
+    scrollbar-shadow-color: #000;
+    scrollbar-highlight-color: #666;
+    scrollbar-3dlight-color: #fff;
+    scrollbar-darkshadow-color: #fff;
+    scrollbar-track-color: #000;
+    scrollbar-arrow-color: #868686;
+}
+
+
+/***************/
+
+/* 공통 class */
+
+/*중앙정렬 속박스*/
+.inbox{
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+    outline: 1px dashed red;
+}
+.cont_4 .inbox{
+    width:100%;
+    max-width: 100%;
+    outline: 1px dashed red;
+}
+
+/*IR(Image Replacement) class*/
+.ir{
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+/*비율유지 class*/
+.fbx{
+    position: relative;
+}
+
+/*.fbx::before{
+    content: "";
+    display: block;
+    padding-top: 70%;
+    //비율에 따라 변경
+}*/
+
+.ibx{/*비율유지속박스*/
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
