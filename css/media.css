@@ -1,0 +1,762 @@
+@charset "utf-8";
+/* 포트폴리오 미디어쿼리 - media.css */
+
+
+
+
+/*********** 수정할 사항***************/
+/*
+ 테블릿 view부터 100% 해제!
+
+*/
+
+/******************************/
+
+/*1200px이하 사이즈*/
+
+@media only screen and (max-width:1920px) {
+    .gnb {
+        font-size: 1.25rem;
+    }
+
+}
+
+@media only screen and (max-width:1550px) {
+    .gnb {
+        font-size: 1.125rem;
+    }
+
+}
+
+@media only screen and (max-width:1420px) {
+    .gnb {
+        font-size: 1rem;
+    }
+
+    .gnb a {
+        margin-left: 2.875rem;
+    }
+}
+
+@media only screen and (max-width:1400px) {
+    .about_us_wrap {
+        position: relative;
+    }
+
+    .about_us_area {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    /*대규모 공사 다른곳에서 안틀어질 경우 main으로 이전*/
+}
+
+@media only screen and (max-width:1280px) {
+
+    /*
+    전체글자조정
+    rem으로 코딩된 사이즈는 
+    root인 html의 글자크기를
+    기준으로 변경된다!*/
+    html {
+        font-size: 15px;
+    }
+
+    .about_main_img {
+        width: 60%;
+    }
+
+}
+
+@media only screen and (max-width:1250px) {
+    html {
+        font-size: 14.5px;
+    }
+}
+
+/*1200px이하*/
+
+@media all and (max-width:1170px) {
+    /*
+    .work_arrow_wrap{
+        display: none;
+    }
+*/
+
+    .work_arrow_wrap a {
+        background-color: rgba(255, 255, 255, 0.4);
+    }
+
+    .work_arrow_wrap a:nth-child(1) {
+        border-radius: 0 10px 10px 0;
+    }
+
+    .work_arrow_wrap a:nth-child(2) {
+        border-radius: 10px 0 0 10px;
+    }
+}
+
+/*1100px 이하 미디어쿼리*/
+@media all and (max-width:1110px) {
+
+    /*전체글자크기*/
+    html {
+        font-size: 14px;
+    }
+
+    header h1 {
+        left: 2%;
+        top: 24%;
+    }
+
+    .gnb {
+        bottom: 54px;
+
+    }
+
+    .gnb a {
+        margin-left: 2.075rem;
+    }
+
+    .btn_change > div {
+        display: none;
+    }
+
+    .sec_tit::after {
+        bottom: -14px;
+    }
+
+    /*about_us_list 비율*/
+    .about_us_list {
+        width: 800px;
+        max-width: 100%;
+
+    }
+
+
+    .sec_sub_tit {
+        text-align: center;
+        /* padding-top: 50px; */
+        padding-top: 2.125rem;
+        font-family: 'Orbitron', sans-serif;
+        font-size: 1.125rem;
+        color: #d4d4d4;
+    }
+
+
+    /******work*****/
+    .tit_work {
+        text-align: center;
+        margin: auto auto;
+        background: none;
+    }
+
+    .sec_tit.tit_work::after {
+        position: absolute;
+        content: '';
+        bottom: -25px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 2px;
+        width: 60px;
+        background-color: #81d6ea;
+    }
+
+    .work_area p {
+        text-align: center;
+    }
+
+}
+
+/*1100px이하*/
+
+@media only screen and (max-width:1080px) {
+
+    /*메뉴바 햄버거바로 변경!*/
+    .gnb {
+        display: none;
+    }
+
+    .btn_change > div {
+        display: block;
+    }
+
+}
+
+
+/*1024px 이하 미디어쿼리*/
+@media only screen and (max-width:1024px) {
+
+    html {
+        font-size: 13.5px;
+    }
+
+    .about_us_wrap,
+    .service_wrap,
+    .work_wrap {
+        height: auto;
+    }
+
+
+    header h1 {
+        left: 1%;
+    }
+
+    .about_main_img {
+        width: 80%;
+    }
+
+    .service_list li {
+        margin-top: 3%;
+    }
+
+    .work_area {
+        position: relative;
+    }
+
+    .sec_tit_area {
+        height: 24%;
+    }
+
+    .work_list_wrap {
+        align-items: center;
+        height: 76%;
+    }
+
+    .work_list li:nth-child(5n+0),
+    .work_list li:nth-child(6n+0) {
+        margin: 0;
+
+    }
+
+    .work_arrow_wrap {
+        top: 60%;
+    }
+
+
+    .footer_area h4 {
+        padding-top: 5%;
+    }
+
+    /*
+        미디어쿼리 변경팁!!!
+        - 무조건 이미 설정된 선택자를 변경한다!
+        - 적용우선 순위를 걱정할 필요가 없다!
+    */
+    /*상단영역 높이변경*/
+
+    /*로고 파티션박스 가로크기 변경*/
+
+
+    /*gnb메뉴 숨기기*/
+
+
+
+    /*햄버거버튼, 검색버튼 보이기*/
+
+
+    /*컨텐츠 배너 배열변경하기
+    3,1-> 2,2*/
+
+
+}
+
+
+/*1024px 이하 미디어쿼리*/
+
+@media all and (max-width:950px) {
+
+    /*메인wrap 레이아웃 변경*/
+    html {
+        font-size: 13px;
+    }
+
+    header h1 {
+        width: 22%;
+        left: 4%;
+    }
+
+
+    .left {
+        width: 0;
+    }
+
+    .right {
+        width: 70%;
+    }
+
+    .company_name {
+        color: #fff;
+    }
+
+    .quick_menu {}
+
+    .none_op_box h2::after {
+        bottom: -30%;
+    }
+
+    .main_tit_box {
+        margin-left: 10%;
+        padding: 50% 0 6% 0%;
+    }
+
+    .work_sc_btn {
+        margin-left: 30%;
+    }
+
+}
+
+@media all and (max-width:900px) {
+    html {
+        font-size: 12.5px;
+    }
+}
+
+
+
+@media all and (max-width:800px) {
+    /*
+    .service_list {
+        height: 80%;
+    }
+*/
+
+    .service_list > li:nth-child(n+5) {
+        margin-top: 5%;
+    }
+
+    .service_list li > div:last-of-type {
+        margin: 0% 4% 0;
+    }
+
+    .service_list h5::after {
+        top: 100px;
+    }
+}
+
+@media all and (max-width:790px) {
+    .work_list li {
+        width: 46%;
+        height: 22.25rem;
+        margin-bottom: 2%;
+
+    }
+
+
+    .none_op_box > h2 {
+        font-size: 5vw;
+    }
+}
+
+@media all and (max-width:770px) {
+    .work_list li {
+        height: 18.25rem;
+    }
+}
+
+@media all and (max-width:740px) {
+
+    .service_list > li:nth-child(n+5) {
+        margin-top: 6%;
+    }
+}
+
+/*모바일 레이아웃으로 지정*/
+@media all and (max-width:720px) {
+
+    /*
+    .service_wrap, .work_wrap{
+        height: auto;
+    }
+*/
+    .about_us_list {
+        margin-top: 2%;
+    }
+
+    .about_us_area_top {
+        margin-bottom: 2%;
+    }
+
+    .about_us_area_bottom {
+        padding: 10px;
+    }
+
+    .about_main_img {
+        width: 60%;
+    }
+
+    .service_tit_wrap .sec_tit {
+        padding-top: 10%;
+    }
+
+    .sec_tit::after {
+        bottom: -24%;
+    }
+
+    .sec_tit.tit_work::after {
+        bottom: -34%;
+    }
+}
+
+
+
+@media all and (max-width:650px) {
+    html {
+        font-size: 12px;
+    }
+
+    /*헤더 로고 left값 감소*/
+
+
+    .about_us_list > li {
+        width: 50%;
+    }
+
+
+}
+
+@media all and (max-width:620px) {
+    .footer_info_top p br {
+        display: block ! important;
+    }
+}
+
+@media all and (max-width: 600px) {
+    .none_op_box h2 {
+        padding-top: 74%;
+    }
+
+    .none_op_box h2::after {
+        bottom: -16%;
+    }
+}
+
+@media all and (max-width:590px) {
+    .sec_sub_tit {
+        text-align: center;
+        /* padding-top: 50px; */
+        padding-top: 2.125rem;
+        font-family: 'Orbitron', sans-serif;
+        font-size: 1.5rem;
+        color: #d4d4d4;
+    }
+
+    .about_us_list {
+        width: 70%;
+        flex-wrap: wrap;
+        margin-top: 1.25rem;
+    }
+
+    .about_us_list li {
+        width: 50%;
+        margin-bottom: 3%;
+    }
+
+    .about_main_img {
+        width: 70%;
+    }
+
+    .about_us_area_bottom {
+        padding: 2%;
+    }
+}
+
+@media all and (max-width:580px) {
+    .btn {
+        width: 90%;
+    }
+
+    .bullet_list {
+        width: 100%;
+    }
+
+    .bullet_list li {
+        width: 16%;
+    }
+
+    .service_list > li:nth-child(n+5) {
+        margin-top: 8%;
+    }
+}
+
+@media all and (max-width:570px) {
+    html {
+        font-size: 11px;
+    }
+
+    .menu_popup {
+        width: 40%;
+        right: -40%;
+    }
+
+    .about_us_wrap {
+        position: relative;
+    }
+
+    /*
+    .about_us_area_bottom {
+        position: absolute;
+        bottom: 1%;
+    }
+*/
+
+    .about_us_list {
+        margin-top: 2.25rem;
+    }
+
+}
+
+@media all and (max-width:550px) {
+    .work_list li {
+        height: 15.25rem;
+    }
+}
+
+@media all and (max-width:530px) {
+    /*바꿀거
+    헤더 로고랑 메인 타이틀 before랑 포개짐
+    (before 높이 낮추기)
+    
+    */
+}
+
+@media all and (max-width:500px) {
+    .company_name {
+        left: 2%;
+        bottom: 3%;
+    }
+
+    .about_us_area_bottom {
+        bottom: 8%;
+    }
+}
+
+
+@media all and (max-width:520px) {
+    html {
+        font-size: 10.5px;
+    }
+}
+
+/*500px이하 모바일 미디어쿼리*/
+@media only screen and (max-width:500px) {
+
+    /*글자크기변경*/
+    html {
+        font-size: 10px;
+    }
+}
+
+
+/*가로스크롤 없애기!*/
+/*html,body를 화면기준가로폭*/
+
+
+
+
+/*상단영역 높이변경*/
+
+
+/*로고 파티션박스 가로크기 변경*/
+
+
+/*햄버거버튼*/
+
+
+/*배너 비율변경하기*/
+
+
+/*파티션 박스(col-) 전체를 width:100%로 변경!*/
+/*한줄에 하나씩!*/
+
+
+/*비율유지 해제*/
+/*추가비율-컨텐츠박스 없앰*/
+
+
+/*비율박스의 속박스-일반박스화*/
+
+
+/*뉴스박스 패딩제거*/
+
+
+
+
+/*뉴스글자 조정*/
+
+
+/*메뉴배너 가로폭 100%, 높이값 특정px*/
+
+
+
+/*하단영역*/
+/*배경로고 조정*/
+
+
+/*하단주소 조정*/
+
+
+
+
+/*500px이하 모바일 미디어쿼리*/
+@media only screen and (max-width:480px) {}
+
+@media only screen and (max-width:470px) {
+    html {
+        font-size: 9px;
+    }
+
+    .intro_main_tit img {
+        width: 90%;
+        padding-left: 0;
+    }
+}
+
+@media only screen and (max-width:430px) {
+    html {
+        font-size: 8px;
+    }
+
+    .about_us_area_bottom {
+        padding: 0;
+        bottom: 8%;
+    }
+
+    .about_main_img {
+        width: 80%;
+    }
+
+    .c1 {
+        display: none;
+    }
+}
+
+@media only screen and (max-width:420px) {
+    .work_list li {
+        height: 20.25rem;
+    }
+}
+
+@media only screen and (max-width:410px) {
+    .footer_area {
+        padding: 0px 40px;
+    }
+}
+
+@media only screen and (max-width:1920px ~ min-width:401px) {
+    .service_box {
+        opacity: 0;
+    }
+    .service_box img{
+        display: none;
+    }
+    .service_box.active{
+        opacity: 0;
+    }
+}
+
+@media only screen and (max-width:400px) {
+
+    .about_us_list img {
+        width: 90%;
+    }
+
+    .service_list li > div:last-of-type {
+        border-top: 0;
+    }
+
+    .service_list p {
+        display: none;
+    }
+
+}
+
+
+@media only screen and (max-width:390px) {
+    .company_name::after {
+        display: none;
+    }
+}
+
+@media only screen and (max-width:380px) {
+    html {
+        font-size: 7px;
+    }
+}
+
+@media only screen and (max-width:360px) {
+    .about_us_area_bottom {
+        margin-top: 8%;
+    }
+
+    .footer_area {
+        padding: 0px 20px;
+    }
+}
+
+@media only screen and (max-width:350px) {
+    .sec_copy br {
+        display: block !important;
+    }
+}
+
+@media only screen and (max-width:340px) {
+    html {
+        font-size: 7px;
+    }
+}
+
+@media only screen and (max-width:340px) {
+    html {
+        font-size: 6.7px;
+    }
+}
+
+@media only screen and (max-width:320px) {
+    html {
+        font-size: 6.5px;
+    }
+
+    /*
+    .service_wrap {
+        overflow: hidden;
+    }
+*/
+
+    /*
+    .service_tit_wrap {
+        height: 20%;
+    }
+
+    .service_list_wrap {
+        height: calc(100% - 20%);
+    }
+*/
+}
+
+@media only screen and (max-width:310px) {
+    html {
+        font-size: 6px;
+    }
+
+    .work_sc_btn {
+        margin-left: 24%;
+    }
+
+    .footer_area {
+        padding: 0px 4%;
+    }
+}
+
+@media only screen and (max-width:300px) {
+    html {
+        font-size: 5.6px;
+    }
+
+    .work_sc_btn {
+        margin-left: 16%;
+    }
+
+}

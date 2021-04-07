@@ -1,14 +1,9 @@
 @charset "utf-8";
 /* core.css - 중요공통기능*/
 
+/*** 속성***/
+
 /**********폰트**********/
-/*양진체*/
-@font-face { font-family: '양진체'; src: url('https://cdn.jsdelivr.net/gh/supernovice-lab/font@0.9/yangjin.woff') format('woff'); font-weight: normal; font-style: normal; }
-/*에스코어드림*/
-@font-face { font-family: 'S-CoreDream-8Heavy'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-8Heavy.woff') format('woff'); font-weight: normal; font-style: normal; }
-/*Orbitron*/
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
-/*font-family: 'Orbitron', sans-serif;*/
 
 /*노토산*/
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
@@ -22,6 +17,16 @@ body{
     font-size: 100%;
     color:#212121;
 }
+
+.none_op_box h2, .main_tit, .work_sc_btn, .intro_main_tit{
+    font-family: Orbitron, sans-serif;
+}
+
+@font-face {
+    font-family: Orbitron;
+    src: url(../font/Orbitron.woff2) format("woff2");
+}
+
 
 /**********스크롤 css 디자인 변경***********/
 
@@ -55,6 +60,7 @@ body{
 /* 공통 class */
 
 /*중앙정렬 속박스*/
+/*
 .inbox{
     width: 1200px;
     max-width: 100%;
@@ -66,8 +72,10 @@ body{
     max-width: 100%;
     outline: 1px dashed red;
 }
+*/
 
 /*IR(Image Replacement) class*/
+/*
 .ir{
     display: block;
     width: 0;
@@ -75,10 +83,11 @@ body{
     overflow: hidden;
 }
 
-/*비율유지 class*/
+비율유지 class
 .fbx{
     position: relative;
 }
+*/
 
 /*.fbx::before{
     content: "";
@@ -87,10 +96,10 @@ body{
     //비율에 따라 변경
 }*/
 
-.ibx{/*비율유지속박스*/
+/*.ibx{비율유지속박스
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-}
+}*/
