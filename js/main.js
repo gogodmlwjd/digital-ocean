@@ -22,7 +22,9 @@ $(function () { ///////JQB/////////////////////
         }
 
     });
-
+    $("a").click(function(e){
+        e.preventDefault();
+    }); /// click /////
 
     ///// GNB a링크를 클릭하면 해당 페이지 위치로 이동 애니메이션 ///
     //이벤트대상 : .gnb a, .menu_popup a
