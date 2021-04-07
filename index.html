@@ -4,266 +4,439 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Ocean 눈누나루ㅜ나</title>
+    <title>Digital Ocean</title>
     <!--CSS-->
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link href="font/css/all.css" rel="stylesheet">
     <!-- jQuery library -->
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/jquery.lightbox-0.5.js"></script>
+    <script src="js/jquery.backstretch.min.js"></script>
+    <script>
+
+    </script>
 </head>
 
 <body>
     <!--0. 퀵메뉴 영역-->
     <aside class="quick_menu">
-        <a href="#"><img src="images/quick_icon_1.png" alt="위치"></a>
-        <a href="#"><img src="images/quick_icon_2.png" alt="메일"></a>
+        <a href="https://goo.gl/maps/4f2CzjUEwgom5RLP7" target="_blank"><img src="images/quick_icon_1.png" alt="위치"></a>
+        <a href="mailto:rnltnsdhkfcm@naver.com"><img src="images/quick_icon_2.png" alt="메일"></a>
     </aside>
     <!--전체영역-->
     <div class="main_wrap">
+        <div class="menu_popup">
+            <ul class="menu_popup_list">
+                <li><a href=".main_visual_wrap">HOME</a></li>
+                <li><a href=".about_us_wrap">ABOUT</a></li>
+                <li><a href=".service_wrap">SERVICE</a></li>
+                <li><a href=".work_wrap">WORK</a></li>
+                <li><a href=".company_wrap">CONTACT</a></li>
+            </ul>
+        </div>
         <!--1.헤더영역-->
         <header>
-            <h1><a href="/"><img src="images/logo.png" alt="로고"></a></h1>
+            <h1><a href=".main_visual_wrap" class="logo"><img src="images/logo.png" alt="로고"></a></h1>
             <nav>
                 <ul class="gnb">
-                    <li><a href=".main_visual_wrap">HOME</a></li>
-                    <li><a href=".about_us_wrap">ABOUT</a></li>
-                    <li><a href=".service_wrap">SERVICE</a></li>
-                    <li><a href=".work_wrap">WORK</a></li>
-                    <li><a href=".company_wrap">CONTACT</a></li>
+                    <li class="on"><a href=".main_visual_wrap"><span style="position: relative; z-index: 1;">HOME</span></a></li>
+                    <li><a href=".about_us_wrap"><span style="position: relative; z-index: 1;">ABOUT</span></a></li>
+                    <li><a href=".service_wrap"><span style="position: relative; z-index: 1;">SERVICE</span></a></li>
+                    <li><a href=".work_wrap"><span style="position: relative; z-index: 1;">WORK</span></a></li>
+                    <li><a href=".company_wrap"><span style="position: relative; z-index: 1;">CONTACT</span></a></li>
                 </ul>
             </nav>
+            <div class="btn_change">
+                <div class="x_btn">
+                    <img src="images/x_icon_gray.png" alt="닫기버튼">
+                </div>
+                <div class="hamburger_bar">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
         </header>
-        <!--2.메인비주얼 영역-->
-        <section class="main_visual_wrap">
-            <div class="op_box left">
+        <div class="content">
+            <!--2.메인비주얼 영역-->
+            <section class="main_visual_wrap">
+                <div class="op_box left">
 
-            </div>
-            <div class="none_op_box">
-                <h2>LEVI'S</h2>
-                <p>Styling on tour</p>
-                <button>more</button>
-                <ul class="bullet_list">
+                </div>
+                <div class="none_op_box">
+                    <h2>LEVI'S</h2>
+                    <p>Styling on tour</p>
 
-                </ul>
-            </div>
-            <div class="op_box right">
-                 <button class="work_sc_btn">Work <span><img src="images/work_sc_btn arrow.png" alt=""></span></button>
-            </div>
-            <h1 class="main_tit first">WE ARE</h1>
-            <h1 class="main_tit second">CREATIVE</h1>
-            <p class="company_name"><small>ⓒ</small>DIGITAL OCEAN</p>
-        </section>
-        <!--3. about_us영역-->
-        <section class="about_us_wrap">
-            <div class="about_us_area">
-                <h3 class="sec_tit">ABOUT US</h3>
-                <h4 class="sec_sub_tit">digital ocean is your pacemaker</h4>
-                <p class="sec_copy">디지털 오션은 페이스메이커로서 한계를 넘어선 지속적인 성장을 돕습니다.</p>
-                <ul class="about_us_list">
-                    <li>
-                        <img src="images/about_us_icon_1.png" alt="about_us_img_1">
-                        <p>
-                            사전분석과 리서치를 통한 전략적<br> 온라인 마케팅 방안제시
-                        </p>
-                    </li>
-                    <li>
-                        <img src="images/about_us_icon_2.png" alt="about_us_img_2">
-                        <p>
-                            다양한 마케팅 플랫폼을 통한<br>
-                            모든 소비자 접점공략
-                        </p>
-                    </li>
-                    <li>
-                        <img src="images/about_us_icon_3.png" alt="about_us_img_3">
-                        <p>
-                            온라인상의 스타일을<br>
-                            선도하는 컨텐츠 제작
-                        </p>
-                    </li>
-                    <li>
-                        <img src="images/about_us_icon_4.png" alt="about_us_img_4">
-                        <p>
-                            빠르게 변화하는 웹 환경을
-                            <br>리드하는 신규 미디어 제시
-                        </p>
-                    </li>
-                </ul>
-            </div>
-            <img src="images/about_us_main_img.png" alt="미디어" class="about_main_img">
-        </section>
-        <!--4. service영역-->
-        <section class="service_wrap">
-            <div class="service_area">
-                <div class="service_tit_wrap">
-                    <h3 class="sec_tit">SERVICE</h3>
-                    <h4 class="sec_sub_tit">digital ocean is your pacemaker</h4>
-                    <p class="sec_copy">디지털 오션은 페이스메이커로서 한계를 넘어선 지속적인 성장을 돕습니다.</p>
-                </div>
-                <div class="service_list_wrap">
-                    <ul class="service_list">
-                        <li>
-                            <span>
-                                <img src="images/service_icon_1.png" alt="">
-                                <img src="images/service_icon_h_1.png" alt="">
-                            </span>
-                            <text>
-                                <h5>DISPLAY AD</h5>
-                                <p>
-                                    사전 분석과 리서치를 통한 전략적<br>
-                                    온라인 마케팅 방안제시
-                                </p>
-                            </text>
-                        </li>
-                        <li>
-                            <span>
-                                <img src="images/service_icon_2.png" alt="">
-                                <img src="images/service_icon_h_2.png" alt="">
-                            </span>
-                            <text>
-                                <h5>DISPLAY AD</h5>
-                                <p>
-                                    사전 분석과 리서치를 통한 전략적<br>
-                                    온라인 마케팅 방안제시
-                                </p>
-                            </text>
-                        </li>
-                        <li>
-                            <span>
-                                <img src="images/service_icon_3.png" alt="">
-                                <img src="images/service_icon_h_3.png" alt="">
-                            </span>
-                            <text>
-                                <h5>DISPLAY AD</h5>
-                                <p>
-                                    사전 분석과 리서치를 통한 전략적<br>
-                                    온라인 마케팅 방안제시
-                                </p>
-                            </text>
-                        </li>
-                        <li>
-                            <span>
-                                <img src="images/service_icon_4.png" alt="">
-                                <img src="images/service_icon_h_4.png" alt="">
-                            </span>
-                            <text>
-                                <h5>DISPLAY AD</h5>
-                                <p>
-                                    사전 분석과 리서치를 통한 전략적<br>
-                                    온라인 마케팅 방안제시
-                                </p>
-                            </text>
-                        </li>
-                        <li>
-                            <span>
-                                <img src="images/service_icon_5.png" alt="">
-                                <img src="images/service_icon_h_5.png" alt="">
-                            </span>
-                            <text>
-                                <h5>DISPLAY AD</h5>
-                                <p>
-                                    사전 분석과 리서치를 통한 전략적<br>
-                                    온라인 마케팅 방안제시
-                                </p>
-                            </text>
-                        </li>
-                        <li>
-                            <span>
-                                <img src="images/service_icon_6.png" alt="">
-                                <img src="images/service_icon_h_6.png" alt="">
-                            </span>
-                            <text>
-                                <h5>DISPLAY AD</h5>
-                                <p>
-                                    사전 분석과 리서치를 통한 전략적<br>
-                                    온라인 마케팅 방안제시
-                                </p>
-                            </text>
-                        </li>
-                        <li>
-                            <span>
-                                <img src="images/service_icon_7.png" alt="">
-                                <img src="images/service_icon_h_7.png" alt="">
-                            </span>
-                            <text>
-                                <h5>DISPLAY AD</h5>
-                                <p>
-                                    사전 분석과 리서치를 통한 전략적<br>
-                                    온라인 마케팅 방안제시
-                                </p>
-                            </text>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <!--5. works영역-->
-        <section class="work_wrap">
-            <div class="work_area">
-                <h3 class="sec_tit tit_work">work</h3>
-                <p>
-                    디지털 오션은 온라인 마케팅 전략기획, 광고 디자인 및 제작,<br>
-                    프로모션, 광고효과 측정, 뉴 미디어 제시등 온라인 광고사업의 최고 수준의<br>
-                    기획 및 노하우를 접목하여 컨버전스 시대에 걸맞는 토탈 마케팅 솔루션을 제공합니다.
-                </p>
-                <h4>저희와 함께 성공적인 프로젝트를 진행하세요!</h4>
-                <div class="work_list_wrap">
-                    <ul class="work_list">
-                        <li><a href="#"></a></li>
-                        <li><a href="#"></a></li>
+
+                    <a href="http://www.diocean.co.kr/category/portfolio/page/19/" target="_blank"><button class="btn bt1"><span>more</span></button></a>
+                    <!--버튼 누르면 타이밍에맞는 페이지로 이동
+                    http://www.diocean.co.kr/category/portfolio/page/17/ //아식스
+                    
+                    -->
+
+                    <ul class="bullet_list">
+                        <!--li누르면 background변환되게!-->
+                        <li class="on"><a href="#"></a></li>
                         <li><a href="#"></a></li>
                         <li><a href="#"></a></li>
                         <li><a href="#"></a></li>
                         <li><a href="#"></a></li>
                     </ul>
                 </div>
-            </div>
-        </section>
-        <!--6. contact영역-->
-        <section class="company_wrap">
-            <!--6-1. 회사 소개서 영역-->
-            <div class="company_intro">
-                <h4 class="sec_tit">CONTACT</h4>
-                <h4 class="intro_main_tit">
-                    <span>W</span>ould you like<br>
-                    width<img src="images/logo.png" alt="로고">
-                </h4>
-                <button>
-                   <a href="#">
-                    회사소개서
-                    <img src="images/downloader_icon_wh.png" alt="다운로드아이콘">
-                    </a>
-                </button>
-            </div>
-            <!--6-2. footer영역-->
-            <footer>
-                <div class="footer_area">
-                    <h4><img src="images/footer_logo.png" alt="푸터로고"></h4>
-                    <div class="footer_info_wrap">
-                        <ul class="footer_info_top">
+                <div class="op_box right">
+                    <div class="main_tit_area">
+                        <div class="main_tit_box">
+                            <h1 class="main_tit first">WE ARE</h1>
+                            <h1 class="main_tit second">CREATIVE</h1>
+                        </div>
+                        <a href=".work_wrap"><button class="work_sc_btn">
+                                Work
+                                <span><img src="images/work_sc_btn arrow.png" alt="">
+                                </span>
+                            </button></a>
+                    </div>
+                </div>
+
+                <p class="company_name"><small>ⓒ</small>DIGITAL OCEAN</p>
+            </section>
+            <!--3. about_us영역-->
+            <section class="about_us_wrap">
+                <div class="about_us_area">
+                    <div class="about_us_area_top">
+                        <h3 class="sec_tit">ABOUT US</h3>
+                        <h4 class="sec_sub_tit">digital ocean is your pacemaker</h4>
+                        <p class="sec_copy">디지털 오션은 페이스메이커로서<br> 한계를 넘어선 지속적인 성장을 돕습니다.</p>
+                        <ul class="about_us_list">
                             <li>
-                                <h5>ADDRESS</h5>
-                                <p>서울시 서초구 서초중앙로8길 117 지어소프트 빌딩</p>
+                                <img src="images/about_us_icon_1.png" alt="about_us_img_1">
+                                <p>
+                                    사전분석과 리서치를 통한 전략적<br> 온라인 마케팅 방안제시
+                                </p>
                             </li>
                             <li>
-                                <h5>TEL</h5>
-                                <p>02-2155-5100</p>
+                                <img src="images/about_us_icon_2.png" alt="about_us_img_2">
+                                <p>
+                                    다양한 마케팅 플랫폼을 통한<br>
+                                    모든 소비자 접점공략
+                                </p>
+                            </li>
+                            <li>
+                                <img src="images/about_us_icon_3.png" alt="about_us_img_3">
+                                <p>
+                                    온라인상의 스타일을<br>
+                                    선도하는 컨텐츠 제작
+                                </p>
+                            </li>
+                            <li>
+                                <img src="images/about_us_icon_4.png" alt="about_us_img_4">
+                                <p>
+                                    빠르게 변화하는 웹 환경을
+                                    <br>리드하는 신규 미디어 제시
+                                </p>
                             </li>
                         </ul>
-                        <ul class="footer_info_bottom">
+                    </div>
+                    <!--<div class="about_media_img"></div>-->
+                    <div class="about_us_area_bottom">
+                        <img src="images/about_us_main_img.png" alt="미디어" class="about_main_img">
+                    </div>
+                </div>
+
+            </section>
+            <!--4. service영역-->
+            <section class="service_wrap">
+                <div class="service_area">
+                    <div class="service_tit_wrap">
+                        <h3 class="sec_tit">SERVICE</h3>
+                        <h4 class="sec_sub_tit">digital ocean is your pacemaker</h4>
+                        <p class="sec_copy">디지털 오션은 페이스메이커로서<br> 한계를 넘어선 지속적인 성장을 돕습니다.</p>
+                    </div>
+                    <div class="service_list_wrap">
+                        <ul class="service_list">
                             <li>
-                                <h5>E-MAIL</h5>
-                                <p><a href="#">aaaa@diocean.co.kr</a></p>
+                                <img src="images/service_icon_1.png" alt="">
+                                <img src="images/service_icon_h_1.png" alt="">
+                                <div class="circle_btns">
+                                    <svg>
+                                        <circle data-brackets-id="1187" class="c1" cx="55" cy="55" r="50" transform="rotate(-90,55,55)"></circle>
+                                    </svg>
+                                </div>
+                                <div class="list_tit display">
+                                    <h5>DISPLAY AD</h5>
+                                    <p>
+                                        다양하고 감각적인 디자인을 선호하는 소비자를 만족시키며 특별한 컨셉을 창출합니다.
+                                    </p>
+                                </div>
                             </li>
                             <li>
-                                <p>COPYRIGHT(c)2016 DIGITALOCEAN.<br>ALL RIGHT RESERVED.</p>
+                                <img src="images/service_icon_2.png" alt="">
+                                <img src="images/service_icon_h_2.png" alt="">
+                                <div class="circle_btns">
+                                    <svg>
+                                        <circle data-brackets-id="1187" class="c1" cx="55" cy="55" r="50" transform="rotate(-90,55,55)"></circle>
+                                    </svg>
+                                </div>
+                                <div class="list_tit search">
+                                    <h5>SEARCH AD</h5>
+                                    <p>
+                                        SA를 포함한 통합 마케팅 솔루션은 온라인 마케팅의 중요한 서비스를 제공합니다.
+                                    </p>
+                                </div>
                             </li>
-                            
+                            <li>
+                                <img src="images/service_icon_3.png" alt="">
+                                <img src="images/service_icon_h_3.png" alt="">
+                                <div class="circle_btns">
+                                    <svg>
+                                        <circle data-brackets-id="1187" class="c1" cx="55" cy="55" r="50" transform="rotate(-90,55,55)"></circle>
+                                    </svg>
+                                </div>
+                                <div class="list_tit web">
+                                    <h5>WEB</h5>
+                                    <p>
+                                        웹표준을 기반으로 최신 웹동향을 분석하고 설계하여 UX에 준하는 반응형 웹사이트를 제작합니다.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="images/service_icon_4.png" alt="">
+                                <img src="images/service_icon_h_4.png" alt="">
+                                <div class="circle_btns">
+                                    <svg>
+                                        <circle data-brackets-id="1187" class="c1" cx="55" cy="55" r="50" transform="rotate(-90,55,55)"></circle>
+                                    </svg>
+                                </div>
+                                <div class="list_tit mobile">
+                                    <h5>MOBILE</h5>
+                                    <p>
+                                        모바일에 최적화된 UI 및 디자인으로 모바일 중심의 반응형 모바일웹 및 iOS, Andriod 앱을 제작합니다.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="images/service_icon_5.png" alt="">
+                                <img src="images/service_icon_h_5.png" alt="">
+                                <div class="circle_btns">
+                                    <svg>
+                                        <circle data-brackets-id="1187" class="c1" cx="55" cy="55" r="50" transform="rotate(-90,55,55)"></circle>
+                                    </svg>
+                                </div>
+                                <div class="list_tit sns">
+                                    <h5>SNS</h5>
+                                    <p>
+                                        지속적인 커뮤니케이션으로 소비자들과 긍정적인 관계를 형성함으로써 그들을 통하여 SNS상의 활발한 활동과 바이럴 효과를 얻습니다.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="images/service_icon_6.png" alt="">
+                                <img src="images/service_icon_h_6.png" alt="">
+                                <div class="circle_btns">
+                                    <svg>
+                                        <circle data-brackets-id="1187" class="c1" cx="55" cy="55" r="50" transform="rotate(-90,55,55)"></circle>
+                                    </svg>
+                                </div>
+                                <div class="list_tit promotion">
+                                    <h5>PROMOTION</h5>
+                                    <p>
+                                        온, 오프라인을 통합한 다양한 프로모션으로 캠페인 및 세일즈 의도에 적합한 성과를 이뤄냅니다.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="images/service_icon_7.png" alt="">
+                                <img src="images/service_icon_h_7.png" alt="">
+                                <div class="circle_btns">
+                                    <svg>
+                                        <circle data-brackets-id="1187" class="c1" cx="55" cy="55" r="50" transform="rotate(-90,55,55)"></circle>
+                                    </svg>
+                                </div>
+                                <div class="list_tit video">
+                                    <h5>VIDEO</h5>
+                                    <p>
+                                        캠페인 전략에 근거하는 다양한 바이럴 영상 및 TVCF 등을 제작합니다.
+                                    </p>
+                                </div>
+                            </li>
                         </ul>
                     </div>
                 </div>
-            </footer>
-        </section>
+                <div class="service_box">
+                    <a href="#"><img src="images/x_icon_wh.png" alt="x버튼"></a>
+                    <h5>DISPLAY AD</h5>
+                    <p>
+                        다양하고 감각적인 디자인을 선호하는 소비자를 만족시키며 특별한 컨셉을 창출합니다.
+                    </p>
+                </div>
+            </section>
+            <!--5. works영역-->
+            <section class="work_wrap">
+                <div class="work_area">
+                    <div class="sec_tit_area">
+                        <h3 class="sec_tit tit_work">work</h3>
+                        <p>
+                            디지털 오션은 온라인 마케팅 전략기획, 광고 디자인 및 제작,<br>
+                            프로모션, 광고효과 측정, 뉴 미디어 제시등 온라인 광고사업의 최고 수준의<br>
+                            기획 및 노하우를 접목하여 컨버전스 시대에 걸맞는 토탈 마케팅 솔루션을 제공합니다.
+                        </p>
+                        <h4 class="sec_work_tit">
+                            저희와 함께 성공적인 프로젝트를 진행하세요!
+                        </h4>
+                    </div>
+
+                    <div class="work_list_wrap">
+                        <ul class="work_list">
+                            <li style="background:url(images/work_sum/240x240.jpg) no-repeat center/cover;"><a href="#" class="work_sum_box">
+                                    <h5>네파</h5>
+                                    <small>프리워크 캠페인</small>
+                                </a></li>
+                            <li style="background:url(images/work_sum/240x240_asics.jpg) no-repeat center/cover;"><a href="#" class="work_sum_box">
+                                    <h5>ASICS</h5>
+                                    <small>Want it more</small>
+                                </a></li>
+                            <li style="background:url(images/work_sum/240x240_colombiana.jpg) no-repeat center/cover;"><a href="#" class="work_sum_box">
+                                    <h5>맥스웰하우스</h5>
+                                    <small>콜롬비아나X급식생</small>
+                                </a>
+                            <li style="background:url(images/work_sum/rashguard_240x240.jpg) no-repeat center/cover;"><a href="#" class="work_sum_box">
+                                    <h5>네파</h5>
+                                    <small>래쉬가드</small>
+                                </a></li>
+                            <li style="background:url(images/work_sum/thumbnail.jpg) no-repeat center/cover;"><a href="#" class="work_sum_box">
+                                    <h5>스마트카라</h5>
+                                    <small>TVCF</small>
+                                </a></li>
+                            <li style="background:url(images/work_sum/post_award.png) no-repeat center/cover;"><a href="#" class="work_sum_box">
+                                    <h5>포스트</h5>
+                                    <small>2017 포트스 어워즈 캠페인</small>
+                                </a></li>
+                        </ul>
+
+
+
+                        <ul class="work_list list_2">
+                            <li style="background:url(images/work_sum/hanwha_thum.jpg) no-repeat center/cover;"><a href="#" class="work_sum_box">
+                                    <h5>한화자산운용</h5>
+                                    <small>한화자산운용</small>
+                                </a></li>
+                            <li style="background:url(images/work_sum/gm_festival.png) no-repeat center/cover;"><a href="#" class="work_sum_box">
+                                    <h5>쉐보레</h5>
+                                    <small>NR Work</small>
+                                </a></li>
+                            <li style="background:url(images/work_sum/unnamed-file.png) no-repeat center/cover;"><a href="#" class="work_sum_box">
+                                    <h5>갤러리아몰</h5>
+                                    <small>페이스북 운영</small>
+                                </a>
+                            <li style="background:url(images/work_sum/raemian_thum.png) no-repeat center/cover;"><a href="#" class="work_sum_box">
+                                    <h5>레미안</h5>
+                                    <small>2019 RAEMIAN ADVERTISING</small>
+                                </a></li>
+                            <li style="background:url(images/work_sum/post_sns.png) no-repeat center/cover;"><a href="#" class="work_sum_box">
+                                    <h5>포스트</h5>
+                                    <small>연간 SNS 운영</small>
+                                </a></li>
+                            <li style="background:url(images/work_sum/hantoo_thum.jpg) no-repeat center/cover;"><a href="#" class="work_sum_box">
+                                    <h5>한국투자증권</h5>
+                                    <small>연금자산캠페인</small>
+                                </a></li>
+                        </ul>
+
+                        <ul class="work_list list_3">
+                            <li style="background:url(images/work_sum/img_portfolio_small_11.jpg) no-repeat center/cover;"><a href="#" class="work_sum_box">
+                                    <h5>한국투자증권</h5>
+                                    <small>평생연금저축 TVCF</small>
+                                </a></li>
+                            <li style="background:url(images/work_sum/img_portfolio_small_09.jpg) no-repeat center/cover;"><a href="#" class="work_sum_box">
+                                    <h5>네파</h5>
+                                    <small>유틸리티다운 프로모션</small>
+                                </a></li>
+                            <li style="background:url(images/work_sum/img_portfolio_small_07_re.jpg) no-repeat center/cover;"><a href="#" class="work_sum_box">
+                                    <h5>KT</h5>
+                                    <small>GIGA LTE IMC 운영</small>
+                                </a>
+                            <li style="background:url(images/work_sum/img_portfolio_small_05.jpg) no-repeat center/cover;"><a href="#" class="work_sum_box">
+                                    <h5>아제라</h5>
+                                    <small>브랜드 프로모션</small>
+                                </a></li>
+                            <li style="background:url(images/work_sum/img_portfolio_small_04.jpg) no-repeat center/cover;"><a href="#" class="work_sum_box">
+                                    <h5>그라나사</h5>
+                                    <small>EP.2 가문점령전 프로모션</small>
+                                </a></li>
+                            <li style="background:url(images/work_sum/img_portfolio_small_12.jpg) no-repeat center/cover;"><a href="#" class="work_sum_box">
+                                    <h5>메이플스토리</h5>
+                                    <small>12주년 프로모션</small>
+                                </a></li>
+                        </ul>
+                    </div>
+
+                    <div class="work_arrow_wrap">
+                        <a href="#"><img src="images/work_sc_btn_arrow_left.png" alt="좌측화살표"></a>
+                        <a href="#"><img src="images/work_sc_btn_arrow_right.png" alt="우측화살표"></a>
+                    </div>
+
+                </div>
+            </section>
+            <!--6. contact영역-->
+            <section class="company_wrap">
+                <!--6-1. 회사 소개서 영역-->
+                <div class="company_intro">
+                    <div class="company_intro_area">
+                        <h4 class="sec_tit">CONTACT</h4>
+                        <h4 class="intro_main_tit">
+                            <span>W</span>ould you like<br>
+                            width<img src="images/logo.png" alt="로고">
+                        </h4>
+                        <button>
+                            <a href="http://www.diocean.co.kr/wp-content/uploads/2016/05/Introducing_Digitalocean_2016_fin.pdf" target="_blank">
+                                <h5>
+                                    회사소개서
+                                    <img src="images/downloader_icon_wh.png" alt="다운로드아이콘">
+                                </h5>
+                            </a>
+                        </button>
+                    </div>
+                </div>
+                <!--6-2. footer영역-->
+                <footer>
+                    <div class="footer_area">
+                        <h4><img src="images/footer_logo.png" alt="푸터로고"></h4>
+                        <div class="footer_info_wrap">
+                            <ul class="footer_info_top">
+                                <li>
+                                    <h5>ADDRESS</h5>
+                                    <p>서울시 서초구 서초중앙로8길 117<br>지어소프트 빌딩</p>
+                                </li>
+                                <li>
+                                    <h5>TEL</h5>
+                                    <p>02-2155-5100</p>
+                                </li>
+                            </ul>
+                            <ul class="footer_info_bottom">
+                                <li>
+                                    <h5>E-MAIL</h5>
+                                    <p><a href="mailto:rnltnsdhkfcm@naver.com">aaaa@diocean.co.kr</a></p>
+                                </li>
+                                <li>
+                                    <p>COPYRIGHT(c)2016 DIGITALOCEAN.<br>ALL RIGHT RESERVED.</p>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </footer>
+            </section>
+        </div>
+
+        <!--지도-->
+        <!--<div class="map_popup">
+            <div class="map_info">
+                
+            </div>
+        </div>-->
+
     </div>
 </body>
 
